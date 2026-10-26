@@ -1,0 +1,72 @@
+[
+  {
+    "status": "PASS",
+    "checks": 25,
+    "viewport": [
+      1440,
+      1100
+    ],
+    "names": [
+      "Main page loads 18 models",
+      "Exactly one analysis area is rendered",
+      "The default Flood dataset finishes training",
+      "Dataset selector offers Flood, 50 Startups and custom datasets",
+      "Built-in datasets hide custom import fields",
+      "Selecting 50 Startups loads Profit and trains automatically",
+      "Selecting Flood restores FloodProbability and its heading",
+      "Prediction input updates fitted-model output",
+      "Reset restores training median prediction",
+      "Model selector updates selected features",
+      "Residual tab updates accessible chart",
+      "Custom selection reveals imports and clears old results",
+      "CSV upload recognizes Profit target",
+      "Uploaded CSV runs and produces chart",
+      "Invalid Lasso alpha reports an error",
+      "Failed training disables stale download",
+      "Lasso retrains after correcting alpha",
+      "Download button creates prediction CSV",
+      "Malformed CSV is rejected with a visible message",
+      "No horizontal overflow at current viewport",
+      "CSV URL control loads response and recognizes target",
+      "CSV URL rejects unsupported protocols",
+      "Switching dataset ignores a previous pending URL response",
+      "Returning from custom data trains the built-in dataset",
+      "Dataset selector and import fields fit the viewport"
+    ]
+  },
+  {
+    "status": "PASS",
+    "checks": 25,
+    "viewport": [
+      390,
+      844
+    ],
+    "names": [
+      "Main page loads 18 models",
+      "Exactly one analysis area is rendered",
+      "The default Flood dataset finishes training",
+      "Dataset selector offers Flood, 50 Startups and custom datasets",
+      "Built-in datasets hide custom import fields",
+      "Selecting 50 Startups loads Profit and trains automatically",
+      "Selecting Flood restores FloodProbability and its heading",
+      "Prediction input updates fitted-model output",
+      "Reset restores training median prediction",
+      "Model selector updates selected features",
+      "Residual tab updates accessible chart",
+      "Custom selection reveals imports and clears old results",
+      "CSV upload recognizes Profit target",
+      "Uploaded CSV runs and produces chart",
+      "Invalid Lasso alpha reports an error",
+      "Failed training disables stale download",
+      "Lasso retrains after correcting alpha",
+      "Download button creates prediction CSV",
+      "Malformed CSV is rejected with a visible message",
+      "No horizontal overflow at current viewport",
+      "CSV URL control loads response and recognizes target",
+      "CSV URL rejects unsupported protocols",
+      "Switching dataset ignores a previous pending URL response",
+      "Returning from custom data trains the built-in dataset",
+      "Dataset selector and import fields fit the viewport"
+    ]
+  }
+]

@@ -1,0 +1,45 @@
+# Local environments and downloaded packages.
+.venv/
+venv/
+.wheels/
+node_modules/
+
+# Python and notebook caches.
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.pytest_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Browser profiles and generated test harness.
+.chrome-profile*/
+tests/browser_smoke.html
+
+# Machine-specific configuration and credentials.
+.agents/
+.codex/
+.aws/
+.ssh/
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+.vscode/
+.idea/
+Thumbs.db
+.DS_Store
+
+# Runtime logs and temporary files.
+*.log
+*.tmp
+*.bak
+
+# Optional personal AI conversations are not part of the submission.
+reports/conversation*.json
+reports/AI_協助與對話紀錄.*
+題目/
+
+# Keep source code, notebooks, datasets, reports, results, and web/dist tracked.

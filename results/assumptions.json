@@ -1,0 +1,42 @@
+[
+  {
+    "assumption": "線性關係",
+    "test": "Ramsey RESET (powers 2, 3)",
+    "statistic": null,
+    "p_value": null,
+    "note": "此模型殘差僅有浮點運算誤差；改參考 SelectKBest14 的非退化殘差診斷。",
+    "conclusion": "殘差近零，檢定退化，不作統計解讀"
+  },
+  {
+    "assumption": "殘差獨立性",
+    "test": "Durbin–Watson (descriptive)",
+    "statistic": null,
+    "p_value": null,
+    "note": "此模型殘差僅有浮點運算誤差；改參考 SelectKBest14 的非退化殘差診斷。",
+    "conclusion": "殘差近零，檢定退化，不作統計解讀"
+  },
+  {
+    "assumption": "等變異性",
+    "test": "Koenker–Breusch–Pagan LM",
+    "statistic": null,
+    "p_value": null,
+    "note": "此模型殘差僅有浮點運算誤差；改參考 SelectKBest14 的非退化殘差診斷。",
+    "conclusion": "殘差近零，檢定退化，不作統計解讀"
+  },
+  {
+    "assumption": "殘差常態性",
+    "test": "Jarque–Bera",
+    "statistic": null,
+    "p_value": null,
+    "note": "此模型殘差僅有浮點運算誤差；改參考 SelectKBest14 的非退化殘差診斷。",
+    "conclusion": "殘差近零，檢定退化，不作統計解讀"
+  },
+  {
+    "assumption": "無嚴重多重共線性",
+    "test": "Maximum VIF",
+    "statistic": 1.0010022528669937,
+    "p_value": null,
+    "note": "VIF > 5 作為需關注的經驗門檻；共線性影響係數穩定性，不是因果證據。",
+    "conclusion": "未見嚴重共線性"
+  }
+]

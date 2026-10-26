@@ -1,0 +1,701 @@
+{
+  "dataset": "Kaggle Flood Prediction Dataset (flood.csv)",
+  "target": "FloodProbability",
+  "rows": 50000,
+  "features": [
+    "MonsoonIntensity",
+    "TopographyDrainage",
+    "RiverManagement",
+    "Deforestation",
+    "Urbanization",
+    "ClimateChange",
+    "DamsQuality",
+    "Siltation",
+    "AgriculturalPractices",
+    "Encroachments",
+    "IneffectiveDisasterPreparedness",
+    "DrainageSystems",
+    "CoastalVulnerability",
+    "Landslides",
+    "Watersheds",
+    "DeterioratingInfrastructure",
+    "PopulationScore",
+    "WetlandLoss",
+    "InadequatePlanning",
+    "PoliticalFactors"
+  ],
+  "feature_count": 20,
+  "missing": 0,
+  "duplicates": 0,
+  "split": {
+    "train": 30000,
+    "validation": 10000,
+    "test": 10000,
+    "seed": 42
+  },
+  "target_range": [
+    0.285,
+    0.725
+  ],
+  "best": {
+    "key": "All20 / LinearRegression",
+    "selector": "All20",
+    "model": "LinearRegression",
+    "features": 20,
+    "alpha": null,
+    "validation_RMSE": 8.544558348541666e-16,
+    "MAE": 6.805611629800978e-16,
+    "MSE": 7.305194027504693e-31,
+    "RMSE": 8.547042779525965e-16,
+    "R2": 1.0,
+    "Adjusted_R2": 1.0,
+    "MAPE": 1.373611949101299e-13,
+    "MAPE_excluded_zeros": 0
+  },
+  "models": [
+    {
+      "key": "All20 / LinearRegression",
+      "selector": "All20",
+      "model": "LinearRegression",
+      "features": 20,
+      "alpha": null,
+      "validation_RMSE": 8.544558348541666e-16,
+      "MAE": 6.805611629800978e-16,
+      "MSE": 7.305194027504693e-31,
+      "RMSE": 8.547042779525965e-16,
+      "R2": 1.0,
+      "Adjusted_R2": 1.0,
+      "MAPE": 1.373611949101299e-13,
+      "MAPE_excluded_zeros": 0
+    },
+    {
+      "key": "All20 / Ridge",
+      "selector": "All20",
+      "model": "Ridge",
+      "features": 20,
+      "alpha": 0.01,
+      "validation_RMSE": 1.6806189524557124e-08,
+      "MAE": 1.3314124392016514e-08,
+      "MSE": 2.784980226341971e-16,
+      "RMSE": 1.6688260024166605e-08,
+      "R2": 0.9999999999998886,
+      "Adjusted_R2": 0.9999999999998884,
+      "MAPE": 2.7090515774011553e-06,
+      "MAPE_excluded_zeros": 0
+    },
+    {
+      "key": "All20 / Lasso",
+      "selector": "All20",
+      "model": "Lasso",
+      "features": 20,
+      "alpha": 1e-06,
+      "validation_RMSE": 4.514873582765677e-06,
+      "MAE": 3.57658340323585e-06,
+      "MSE": 2.0098683741929685e-11,
+      "RMSE": 4.483155556293991e-06,
+      "R2": 0.9999999919621921,
+      "Adjusted_R2": 0.9999999919460827,
+      "MAPE": 0.0007277291539755348,
+      "MAPE_excluded_zeros": 0
+    },
+    {
+      "key": "SelectKBest14 / LinearRegression",
+      "selector": "SelectKBest14",
+      "model": "LinearRegression",
+      "features": 14,
+      "alpha": null,
+      "validation_RMSE": 0.02746719237124861,
+      "MAE": 0.021867261693133057,
+      "MSE": 0.0007532115666627572,
+      "RMSE": 0.027444700156182382,
+      "R2": 0.698777794738949,
+      "Adjusted_R2": 0.6983554501346771,
+      "MAPE": 4.416932493624359,
+      "MAPE_excluded_zeros": 0
+    },
+    {
+      "key": "SelectKBest14 / Ridge",
+      "selector": "SelectKBest14",
+      "model": "Ridge",
+      "features": 14,
+      "alpha": 0.01,
+      "validation_RMSE": 0.027467192520006414,
+      "MAE": 0.021867262093235917,
+      "MSE": 0.0007532115791958392,
+      "RMSE": 0.027444700384515755,
+      "R2": 0.6987777897267549,
+      "Adjusted_R2": 0.6983554451154553,
+      "MAPE": 4.4169326012934444,
+      "MAPE_excluded_zeros": 0
+    },
+    {
+      "key": "SelectKBest14 / Lasso",
+      "selector": "SelectKBest14",
+      "model": "Lasso",
+      "features": 14,
+      "alpha": 1e-06,
+      "validation_RMSE": 0.027467234071313264,
+      "MAE": 0.021867373291913607,
+      "MSE": 0.0007532150513887404,
+      "RMSE": 0.027444763642428045,
+      "R2": 0.6987764011373477,
+      "Adjusted_R2": 0.6983540545791027,
+      "MAPE": 4.416962280653307,
+      "MAPE_excluded_zeros": 0
+    },
+    {
+      "key": "RFE14 / LinearRegression",
+      "selector": "RFE14",
+      "model": "LinearRegression",
+      "features": 14,
+      "alpha": null,
+      "validation_RMSE": 0.02769789625118651,
+      "MAE": 0.021605130964673005,
+      "MSE": 0.000735329913688303,
+      "RMSE": 0.027116967265686312,
+      "R2": 0.7059289740105886,
+      "Adjusted_R2": 0.7055166560973336,
+      "MAPE": 4.366041940770057,
+      "MAPE_excluded_zeros": 0
+    },
+    {
+      "key": "RFE14 / Ridge",
+      "selector": "RFE14",
+      "model": "Ridge",
+      "features": 14,
+      "alpha": 10,
+      "validation_RMSE": 0.02769787613664922,
+      "MAE": 0.021604844448764163,
+      "MSE": 0.0007353236161827856,
+      "RMSE": 0.02711685114799994,
+      "R2": 0.7059314924908981,
+      "Adjusted_R2": 0.7055191781088123,
+      "MAPE": 4.366008723183666,
+      "MAPE_excluded_zeros": 0
+    },
+    {
+      "key": "RFE14 / Lasso",
+      "selector": "RFE14",
+      "model": "Lasso",
+      "features": 14,
+      "alpha": 1e-05,
+      "validation_RMSE": 0.027697865900739596,
+      "MAE": 0.021604455315817356,
+      "MSE": 0.0007353141355237274,
+      "RMSE": 0.02711667633622763,
+      "R2": 0.7059352839688245,
+      "Adjusted_R2": 0.7055229749027818,
+      "MAPE": 4.365971176450185,
+      "MAPE_excluded_zeros": 0
+    },
+    {
+      "key": "SFS14 / LinearRegression",
+      "selector": "SFS14",
+      "model": "LinearRegression",
+      "features": 14,
+      "alpha": null,
+      "validation_RMSE": 0.027511806674302995,
+      "MAE": 0.021814820513785794,
+      "MSE": 0.000749051123576217,
+      "RMSE": 0.027368798358280492,
+      "R2": 0.7004416271823929,
+      "Adjusted_R2": 0.7000216154428389,
+      "MAPE": 4.401344017157605,
+      "MAPE_excluded_zeros": 0
+    },
+    {
+      "key": "SFS14 / Ridge",
+      "selector": "SFS14",
+      "model": "Ridge",
+      "features": 14,
+      "alpha": 0.01,
+      "validation_RMSE": 0.027511806711544143,
+      "MAE": 0.021814820401091815,
+      "MSE": 0.0007490511187064968,
+      "RMSE": 0.027368798269315677,
+      "R2": 0.7004416291298774,
+      "Adjusted_R2": 0.700021617393054,
+      "MAPE": 4.401344019003521,
+      "MAPE_excluded_zeros": 0
+    },
+    {
+      "key": "SFS14 / Lasso",
+      "selector": "SFS14",
+      "model": "Lasso",
+      "features": 14,
+      "alpha": 1e-06,
+      "validation_RMSE": 0.027511817701214195,
+      "MAE": 0.021814794093689284,
+      "MSE": 0.0007490498567147199,
+      "RMSE": 0.027368775214004736,
+      "R2": 0.7004421338220024,
+      "Adjusted_R2": 0.7000221227928094,
+      "MAPE": 4.401345331941186,
+      "MAPE_excluded_zeros": 0
+    },
+    {
+      "key": "Lasso14 / LinearRegression",
+      "selector": "Lasso14",
+      "model": "LinearRegression",
+      "features": 14,
+      "alpha": null,
+      "validation_RMSE": 0.027438610112304817,
+      "MAE": 0.021870921026329246,
+      "MSE": 0.0007541540174910071,
+      "RMSE": 0.02746186478538934,
+      "R2": 0.6984008925120044,
+      "Adjusted_R2": 0.6979780194519312,
+      "MAPE": 4.420656639696238,
+      "MAPE_excluded_zeros": 0
+    },
+    {
+      "key": "Lasso14 / Ridge",
+      "selector": "Lasso14",
+      "model": "Ridge",
+      "features": 14,
+      "alpha": 0.01,
+      "validation_RMSE": 0.02743861026644453,
+      "MAE": 0.021870921280023332,
+      "MSE": 0.0007541540267560497,
+      "RMSE": 0.027461864954078586,
+      "R2": 0.6984008888067552,
+      "Adjusted_R2": 0.6979780157414868,
+      "MAPE": 4.420656713826069,
+      "MAPE_excluded_zeros": 0
+    },
+    {
+      "key": "Lasso14 / Lasso",
+      "selector": "Lasso14",
+      "model": "Lasso",
+      "features": 14,
+      "alpha": 1e-06,
+      "validation_RMSE": 0.027438653308255585,
+      "MAE": 0.021870993111089906,
+      "MSE": 0.0007541565992083337,
+      "RMSE": 0.027461911790848316,
+      "R2": 0.6983998600390302,
+      "Adjusted_R2": 0.6979769855313233,
+      "MAPE": 4.420677437106735,
+      "MAPE_excluded_zeros": 0
+    },
+    {
+      "key": "Permutation14 / LinearRegression",
+      "selector": "Permutation14",
+      "model": "LinearRegression",
+      "features": 14,
+      "alpha": null,
+      "validation_RMSE": 0.02760015349909488,
+      "MAE": 0.021934507283779426,
+      "MSE": 0.0007559923597608968,
+      "RMSE": 0.027495315232979177,
+      "R2": 0.6976657079542126,
+      "Adjusted_R2": 0.6972418040895514,
+      "MAPE": 4.4252789384197015,
+      "MAPE_excluded_zeros": 0
+    },
+    {
+      "key": "Permutation14 / Ridge",
+      "selector": "Permutation14",
+      "model": "Ridge",
+      "features": 14,
+      "alpha": 10,
+      "validation_RMSE": 0.02760015296300871,
+      "MAE": 0.02193418299933163,
+      "MSE": 0.0007559784465758486,
+      "RMSE": 0.02749506222171262,
+      "R2": 0.6976712720751951,
+      "Adjusted_R2": 0.6972473760120055,
+      "MAPE": 4.425233573501062,
+      "MAPE_excluded_zeros": 0
+    },
+    {
+      "key": "Permutation14 / Lasso",
+      "selector": "Permutation14",
+      "model": "Lasso",
+      "features": 14,
+      "alpha": 1e-06,
+      "validation_RMSE": 0.027600154372703793,
+      "MAE": 0.021934420145101663,
+      "MSE": 0.0007559886505947507,
+      "RMSE": 0.02749524778202136,
+      "R2": 0.6976671913132788,
+      "Adjusted_R2": 0.6972432895284402,
+      "MAPE": 4.4252667689861935,
+      "MAPE_excluded_zeros": 0
+    }
+  ],
+  "eda": {
+    "target_mean": 0.49966039999999995,
+    "target_std": 0.05003439557599166,
+    "target_quartiles": {
+      "0.25": 0.465,
+      "0.5": 0.5,
+      "0.75": 0.535
+    },
+    "train_target_correlations": {
+      "MonsoonIntensity": 0.2189591600514069,
+      "TopographyDrainage": 0.2255312405478172,
+      "RiverManagement": 0.23032703040156896,
+      "Deforestation": 0.21565614432659339,
+      "Urbanization": 0.2264479625293595,
+      "ClimateChange": 0.22089103964842682,
+      "DamsQuality": 0.2297769587951386,
+      "Siltation": 0.22320553102881882,
+      "AgriculturalPractices": 0.22321069906219543,
+      "Encroachments": 0.21355327132576982,
+      "IneffectiveDisasterPreparedness": 0.22104412408426305,
+      "DrainageSystems": 0.2218774002603014,
+      "CoastalVulnerability": 0.21454887090062846,
+      "Landslides": 0.22560293240545165,
+      "Watersheds": 0.22482827931423882,
+      "DeterioratingInfrastructure": 0.23278545118665345,
+      "PopulationScore": 0.22515716873280647,
+      "WetlandLoss": 0.22672668648088629,
+      "InadequatePlanning": 0.2229651714282368,
+      "PoliticalFactors": 0.22820162981557776
+    },
+    "train_max_feature_correlation": 0.017393614880905277
+  },
+  "prediction_interval": {
+    "model": "SelectKBest14 / LinearRegression",
+    "method": "Split conformal absolute-residual prediction interval",
+    "confidence": 0.95,
+    "calibration_count": 10000,
+    "rank": 9501,
+    "radius": 0.05461095730292054,
+    "test_coverage": 0.9497,
+    "mean_width": 0.10922191460584108,
+    "note": "固定使用只由 train 決定的 SelectKBest14 / OLS，沒有用 calibration labels 挑此區間模型或 alpha。外層 validation 同時是此固定輔助模型的 calibration；test 未用來調整寬度。名目邊際涵蓋率依賴交換性假設，不保證每個條件或真實地區的涵蓋率。"
+  },
+  "baseline": {
+    "MAE": 0.0398819768,
+    "MSE": 0.0025006238011111115,
+    "RMSE": 0.05000623762203183,
+    "R2": -4.228458193322737e-05,
+    "Adjusted_R2": -4.228458193322737e-05,
+    "MAPE": 8.11503614791501,
+    "MAPE_excluded_zeros": 0
+  },
+  "selected_features": {
+    "All20": [
+      "MonsoonIntensity",
+      "TopographyDrainage",
+      "RiverManagement",
+      "Deforestation",
+      "Urbanization",
+      "ClimateChange",
+      "DamsQuality",
+      "Siltation",
+      "AgriculturalPractices",
+      "Encroachments",
+      "IneffectiveDisasterPreparedness",
+      "DrainageSystems",
+      "CoastalVulnerability",
+      "Landslides",
+      "Watersheds",
+      "DeterioratingInfrastructure",
+      "PopulationScore",
+      "WetlandLoss",
+      "InadequatePlanning",
+      "PoliticalFactors"
+    ],
+    "SelectKBest14": [
+      "TopographyDrainage",
+      "RiverManagement",
+      "Urbanization",
+      "DamsQuality",
+      "Siltation",
+      "AgriculturalPractices",
+      "DrainageSystems",
+      "Landslides",
+      "Watersheds",
+      "DeterioratingInfrastructure",
+      "PopulationScore",
+      "WetlandLoss",
+      "InadequatePlanning",
+      "PoliticalFactors"
+    ],
+    "RFE14": [
+      "MonsoonIntensity",
+      "RiverManagement",
+      "ClimateChange",
+      "DamsQuality",
+      "Siltation",
+      "IneffectiveDisasterPreparedness",
+      "DrainageSystems",
+      "Landslides",
+      "Watersheds",
+      "DeterioratingInfrastructure",
+      "PopulationScore",
+      "WetlandLoss",
+      "InadequatePlanning",
+      "PoliticalFactors"
+    ],
+    "SFS14": [
+      "MonsoonIntensity",
+      "TopographyDrainage",
+      "RiverManagement",
+      "ClimateChange",
+      "Siltation",
+      "AgriculturalPractices",
+      "IneffectiveDisasterPreparedness",
+      "DrainageSystems",
+      "Landslides",
+      "DeterioratingInfrastructure",
+      "PopulationScore",
+      "WetlandLoss",
+      "InadequatePlanning",
+      "PoliticalFactors"
+    ],
+    "Lasso14": [
+      "TopographyDrainage",
+      "RiverManagement",
+      "Urbanization",
+      "DamsQuality",
+      "Siltation",
+      "AgriculturalPractices",
+      "DrainageSystems",
+      "CoastalVulnerability",
+      "Watersheds",
+      "DeterioratingInfrastructure",
+      "PopulationScore",
+      "WetlandLoss",
+      "InadequatePlanning",
+      "PoliticalFactors"
+    ],
+    "Permutation14": [
+      "TopographyDrainage",
+      "Deforestation",
+      "ClimateChange",
+      "DamsQuality",
+      "Siltation",
+      "AgriculturalPractices",
+      "Encroachments",
+      "IneffectiveDisasterPreparedness",
+      "DrainageSystems",
+      "Landslides",
+      "Watersheds",
+      "PopulationScore",
+      "InadequatePlanning",
+      "PoliticalFactors"
+    ]
+  },
+  "diagnostics": [
+    {
+      "assumption": "線性關係",
+      "test": "Ramsey RESET (powers 2, 3)",
+      "statistic": null,
+      "p_value": null,
+      "note": "此模型殘差僅有浮點運算誤差；改參考 SelectKBest14 的非退化殘差診斷。",
+      "conclusion": "殘差近零，檢定退化，不作統計解讀"
+    },
+    {
+      "assumption": "殘差獨立性",
+      "test": "Durbin–Watson (descriptive)",
+      "statistic": null,
+      "p_value": null,
+      "note": "此模型殘差僅有浮點運算誤差；改參考 SelectKBest14 的非退化殘差診斷。",
+      "conclusion": "殘差近零，檢定退化，不作統計解讀"
+    },
+    {
+      "assumption": "等變異性",
+      "test": "Koenker–Breusch–Pagan LM",
+      "statistic": null,
+      "p_value": null,
+      "note": "此模型殘差僅有浮點運算誤差；改參考 SelectKBest14 的非退化殘差診斷。",
+      "conclusion": "殘差近零，檢定退化，不作統計解讀"
+    },
+    {
+      "assumption": "殘差常態性",
+      "test": "Jarque–Bera",
+      "statistic": null,
+      "p_value": null,
+      "note": "此模型殘差僅有浮點運算誤差；改參考 SelectKBest14 的非退化殘差診斷。",
+      "conclusion": "殘差近零，檢定退化，不作統計解讀"
+    },
+    {
+      "assumption": "無嚴重多重共線性",
+      "test": "Maximum VIF",
+      "statistic": 1.0010022528669937,
+      "p_value": null,
+      "note": "VIF > 5 作為需關注的經驗門檻；共線性影響係數穩定性，不是因果證據。",
+      "conclusion": "未見嚴重共線性"
+    }
+  ],
+  "diagnostics_reduced14": [
+    {
+      "assumption": "線性關係",
+      "test": "Ramsey RESET (powers 2, 3)",
+      "statistic": 0.02049006875659459,
+      "p_value": 0.9797184399670529,
+      "note": "p < .05 表示有函數形式不足的證據；搭配殘差圖判讀。",
+      "conclusion": "未發現足夠違反證據"
+    },
+    {
+      "assumption": "殘差獨立性",
+      "test": "Durbin–Watson (descriptive)",
+      "statistic": 2.0035200896207783,
+      "p_value": null,
+      "note": "依原始 CSV 列序計算。資料無時間、地區或群組資訊，無法驗證獨立性；接近 2 不能證明獨立。",
+      "conclusion": "缺少時間／群組資訊，無法確認"
+    },
+    {
+      "assumption": "等變異性",
+      "test": "Koenker–Breusch–Pagan LM",
+      "statistic": 12.675083018282018,
+      "p_value": 0.5522522649039754,
+      "note": "p < .05 表示異質變異證據；未拒絕不等於證明等變異。",
+      "conclusion": "未發現足夠違反證據"
+    },
+    {
+      "assumption": "殘差常態性",
+      "test": "Jarque–Bera",
+      "statistic": 195.20463558612147,
+      "p_value": 4.091211783198455e-43,
+      "note": "檢查殘差，而非每個輸入特徵。大樣本對輕微偏離敏感；搭配 Q–Q 圖。",
+      "conclusion": "有違反假設的證據"
+    },
+    {
+      "assumption": "無嚴重多重共線性",
+      "test": "Maximum VIF",
+      "statistic": 1.0008118774033188,
+      "p_value": null,
+      "note": "VIF > 5 作為需關注的經驗門檻；共線性影響係數穩定性，不是因果證據。",
+      "conclusion": "未見嚴重共線性"
+    }
+  ],
+  "vif": [
+    {
+      "feature": "MonsoonIntensity",
+      "VIF": 1.0005858860402619
+    },
+    {
+      "feature": "TopographyDrainage",
+      "VIF": 1.0010022528669937
+    },
+    {
+      "feature": "RiverManagement",
+      "VIF": 1.000624495368637
+    },
+    {
+      "feature": "Deforestation",
+      "VIF": 1.0004919342582643
+    },
+    {
+      "feature": "Urbanization",
+      "VIF": 1.00081091036328
+    },
+    {
+      "feature": "ClimateChange",
+      "VIF": 1.0004985652364597
+    },
+    {
+      "feature": "DamsQuality",
+      "VIF": 1.0005093175674131
+    },
+    {
+      "feature": "Siltation",
+      "VIF": 1.000530638110607
+    },
+    {
+      "feature": "AgriculturalPractices",
+      "VIF": 1.000601384663172
+    },
+    {
+      "feature": "Encroachments",
+      "VIF": 1.000978481464608
+    },
+    {
+      "feature": "IneffectiveDisasterPreparedness",
+      "VIF": 1.0002055749276155
+    },
+    {
+      "feature": "DrainageSystems",
+      "VIF": 1.000725229888344
+    },
+    {
+      "feature": "CoastalVulnerability",
+      "VIF": 1.000858585246199
+    },
+    {
+      "feature": "Landslides",
+      "VIF": 1.0005906321851072
+    },
+    {
+      "feature": "Watersheds",
+      "VIF": 1.00058256764608
+    },
+    {
+      "feature": "DeterioratingInfrastructure",
+      "VIF": 1.0004605063757632
+    },
+    {
+      "feature": "PopulationScore",
+      "VIF": 1.0006847007666437
+    },
+    {
+      "feature": "WetlandLoss",
+      "VIF": 1.0006782040665283
+    },
+    {
+      "feature": "InadequatePlanning",
+      "VIF": 1.0008945883460028
+    },
+    {
+      "feature": "PoliticalFactors",
+      "VIF": 1.00064302348846
+    }
+  ],
+  "original_unit_equation": {
+    "intercept": -3.0531133177191805e-15,
+    "coefficients": {
+      "MonsoonIntensity": 0.005000000000000368,
+      "TopographyDrainage": 0.0050000000000000825,
+      "RiverManagement": 0.005000000000000013,
+      "Deforestation": 0.005000000000000016,
+      "Urbanization": 0.005000000000000007,
+      "ClimateChange": 0.00500000000000002,
+      "DamsQuality": 0.0050000000000000175,
+      "Siltation": 0.0050000000000000044,
+      "AgriculturalPractices": 0.004999999999999998,
+      "Encroachments": 0.005000000000000019,
+      "IneffectiveDisasterPreparedness": 0.005000000000000013,
+      "DrainageSystems": 0.005000000000000003,
+      "CoastalVulnerability": 0.005000000000000009,
+      "Landslides": 0.005000000000000009,
+      "Watersheds": 0.005000000000000004,
+      "DeterioratingInfrastructure": 0.0049999999999999975,
+      "PopulationScore": 0.005000000000000005,
+      "WetlandLoss": 0.0050000000000000105,
+      "InadequatePlanning": 0.0049999999999999906,
+      "PoliticalFactors": 0.005000000000000016
+    }
+  },
+  "deterministic_check": {
+    "formula": "FloodProbability = 0.005 × sum(20 features)",
+    "max_absolute_difference": 1.1102230246251565e-16,
+    "note": "建模完成後才檢查的描述性資料特性；未據此修改模型或選擇候選模型。"
+  },
+  "sha256": "4e32fac343580f686de0e65c7e088771d13c2995e71ee26a82fcee37bcf982d3",
+  "source": {
+    "kaggle": "https://www.kaggle.com/datasets/naiyakhalid/flood-prediction-dataset",
+    "mirror": "https://github.com/SumeetSantoshjunnarkar/Floodsense/blob/f40ca4475573f3be79a71fa076f677cca3893ea9/archive/flood.csv",
+    "git_blob_sha": "2c01d36b3fd311430e557548759c551367dd6ad6",
+    "caveat": "同名 flood.csv 的公開鏡像；本機檔案雜湊已保存。未直接以 Kaggle API 核對原始檔位元組。合成／未驗證地理時序來源的教學資料，不代表真實防災風險。"
+  },
+  "methodology": {
+    "selection": "所有 selector 只接觸 30,000 訓練列；5,000 列訓練子樣本做 backward SFS（三折，fold 內 preprocessing）；Permutation 使用訓練集內 75/25 子切分。",
+    "tuning": "用 10,000 列 validation 決定模型與 alpha；未用 test 選模型；未在 train+validation 重訓。",
+    "lasso": "Lasso14 為標準化後 alpha=.001 的絕對係數前 14 名；非聲稱只有 14 個非零係數。",
+    "counts": "原始特徵 20；比較 14 與 20。資料不足 25/30 個原始特徵，不刻意造特徵湊數。",
+    "adjusted_r2": "1-(1-R²)(n-1)/(n-p-1)，test n=10000，p=欄位數。Ridge/Lasso 的 p 並非有效自由度，僅作描述性比較。"
+  },
+  "versions": {
+    "python": "3.11.9",
+    "numpy": "2.4.6",
+    "pandas": "3.0.5",
+    "scipy": "1.17.1",
+    "sklearn": "1.9.0"
+  },
+  "elapsed_seconds": 3.12
+}

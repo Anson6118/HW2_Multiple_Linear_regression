@@ -1,0 +1,42 @@
+[
+  {
+    "assumption": "線性關係",
+    "test": "Ramsey RESET (powers 2, 3)",
+    "statistic": 0.02049006875659459,
+    "p_value": 0.9797184399670529,
+    "note": "p < .05 表示有函數形式不足的證據；搭配殘差圖判讀。",
+    "conclusion": "未發現足夠違反證據"
+  },
+  {
+    "assumption": "殘差獨立性",
+    "test": "Durbin–Watson (descriptive)",
+    "statistic": 2.0035200896207783,
+    "p_value": null,
+    "note": "依原始 CSV 列序計算。資料無時間、地區或群組資訊，無法驗證獨立性；接近 2 不能證明獨立。",
+    "conclusion": "缺少時間／群組資訊，無法確認"
+  },
+  {
+    "assumption": "等變異性",
+    "test": "Koenker–Breusch–Pagan LM",
+    "statistic": 12.675083018282018,
+    "p_value": 0.5522522649039754,
+    "note": "p < .05 表示異質變異證據；未拒絕不等於證明等變異。",
+    "conclusion": "未發現足夠違反證據"
+  },
+  {
+    "assumption": "殘差常態性",
+    "test": "Jarque–Bera",
+    "statistic": 195.20463558612147,
+    "p_value": 4.091211783198455e-43,
+    "note": "檢查殘差，而非每個輸入特徵。大樣本對輕微偏離敏感；搭配 Q–Q 圖。",
+    "conclusion": "有違反假設的證據"
+  },
+  {
+    "assumption": "無嚴重多重共線性",
+    "test": "Maximum VIF",
+    "statistic": 1.0008118774033188,
+    "p_value": null,
+    "note": "VIF > 5 作為需關注的經驗門檻；共線性影響係數穩定性，不是因果證據。",
+    "conclusion": "未見嚴重共線性"
+  }
+]

@@ -1,0 +1,11 @@
+{
+  "model": "SelectKBest14 / LinearRegression",
+  "method": "Split conformal absolute-residual prediction interval",
+  "confidence": 0.95,
+  "calibration_count": 10000,
+  "rank": 9501,
+  "radius": 0.05461095730292054,
+  "test_coverage": 0.9497,
+  "mean_width": 0.10922191460584108,
+  "note": "固定使用只由 train 決定的 SelectKBest14 / OLS，沒有用 calibration labels 挑此區間模型或 alpha。外層 validation 同時是此固定輔助模型的 calibration；test 未用來調整寬度。名目邊際涵蓋率依賴交換性假設，不保證每個條件或真實地區的涵蓋率。"
+}
