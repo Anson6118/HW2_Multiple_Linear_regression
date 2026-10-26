@@ -2,14 +2,10 @@
 
 主資料：Kaggle Flood Prediction Dataset 的 `flood.csv` 公開鏡像，50,000 筆、**20 個原始輸入特徵**，目標 `FloodProbability`。涵蓋 CRISP-DM、五種特徵選擇、Linear Regression / Ridge / Lasso、六種評估指標、五項假設檢查、預測圖及新樣本預測。
 
-Git 收錄 Notebook、分析程式、原始資料、測試、研究報告、分析成果與 `web/dist/` 靜態網頁。`.gitignore` 排除本機環境、瀏覽器設定、快取、執行紀錄與個人對話檔案。網頁本身不依賴 Python 或 Notebook。
-
 ## 直接查看
 
 - **互動網頁**：[web/dist/index.html](web/dist/index.html)，可直接雙擊開啟，不需啟動伺服器。
 - **研究報告**：[reports/HW2_研究報告.html](reports/HW2_研究報告.html)；對應 PDF 為 `reports/HW2_研究報告.pdf`。
-- **Notebook**：[HW2_Multiple_Linear_Regression.ipynb](HW2_Multiple_Linear_Regression.ipynb)，選擇專案 `.venv` kernel 後可依序執行。
-- **第 4 項 AI 協助要求（選填）**：包含 AI 使用紀錄、對話 PDF、NotebookLM 研究與摘要，皆不列入必做或待完成目標。
 - PowerShell 可執行 `./開啟網頁.ps1` 開啟本機網頁。
 
 網站使用單一分析區，透過下拉選單選擇 **Flood、50 Startups 或自選資料集**。內建資料會自動載入與分析；選「自選資料集」才顯示 CSV 檔案／公開網址匯入欄位。可選擇數值目標、設定 Linear/Ridge/Lasso 和 alpha、選擇全部或前 14 個特徵、下載測試集預測。網址來源若限制跨來源存取（CORS），可先下載再匯入。50 Startups 僅示範 CSV 匯入，主作業特徵條件由洪水資料滿足。
@@ -92,10 +88,3 @@ Python 測試包含切分互斥、訓練參數一致性、模型選擇與報告�
 - Permutation：外層訓練集內部 75% 擬合／25% 排名，5 次打亂，按 RMSE 變化取前 14。
 
 只有 20 個原始特徵，比較 14 與 20，不造出 25/30 特徵湊數。Ridge alpha∈{.01,.1,1,10,100}；Lasso alpha∈{1e-6,1e-5,1e-4,.001,.01}。不在 train+validation 重訓，確保匯出的模型與測試報告對應。
-
-## 尚待項目
-
-1. **GitHub 與網站繳交連結**：本機 Git repository、完整作業檔案的 `.gitignore` 與 Pages 部署流程已準備；目標 repository、實際 push 與公開網站仍待確認。需提供目標 repository 並授權 GitHub 連線存取。
-2. **報告基本資料**：填入姓名、學號，並同步更新網頁報告與 PDF。
-
-依老師說明，**整個「4. AI 協助要求」為選填，已移出待完成目標**，包含 GPT 輔助內容標示、AI 使用與對話紀錄、對話 PDF，以及 NotebookLM 研究與至少 100 字摘要。這些項目不影響本作業的必做完成狀態。
