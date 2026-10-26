@@ -1,0 +1,26 @@
+name: Validate website
+
+# GitHub Pages 採用「Deploy from a branch → main / (root)」，
+# 根目錄 index.html 會導向 web/dist/。此流程只負責功能檢查，不負責部署。
+on:
+  push:
+    branches: [main]
+    paths:
+      - web/dist/**
+      - tests/test_browser_core.cjs
+      - .github/workflows/pages.yml
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v6
+
+      - name: Validate regression and CSV features
+        run: node tests/test_browser_core.cjs

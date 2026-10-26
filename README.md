@@ -2,7 +2,7 @@
 
 主資料：Kaggle Flood Prediction Dataset 的 `flood.csv` 公開鏡像，50,000 筆、**20 個原始輸入特徵**，目標 `FloodProbability`。涵蓋 CRISP-DM、五種特徵選擇、Linear Regression / Ridge / Lasso、六種評估指標、五項假設檢查、預測圖及新樣本預測。
 
-Git 收錄 Notebook、分析程式、原始資料、測試、研究報告、分析成果與 `web/dist/` 靜態網頁。`.gitignore` 排除本機環境、瀏覽器設定、快取、執行紀錄與個人對話檔案。網頁本身不依賴 Python 或 Notebook，GitHub Pages 僅發布 `web/dist/` 中的內容。
+Git 收錄 Notebook、分析程式、原始資料、測試、研究報告、分析成果與 `web/dist/` 靜態網頁。`.gitignore` 排除本機環境、瀏覽器設定、快取、執行紀錄與個人對話檔案。網頁本身不依賴 Python 或 Notebook。
 
 ## 直接查看
 
@@ -16,9 +16,11 @@ Git 收錄 Notebook、分析程式、原始資料、測試、研究報告、分�
 
 ## GitHub Pages 部署
 
-已提供 `.github/workflows/pages.yml`。將 repository 的 **Settings → Pages → Build and deployment → Source** 設為 **GitHub Actions** 後，推送至 `main` 並變更網頁檔案，或在 Actions 手動執行 **Deploy GitHub Pages**，即可執行網頁功能檢查並發布 `web/dist/`。
+網站：<https://anson6118.github.io/HW2_Multiple_Linear_regression/>
 
-專案網站的預期網址格式為 `https://<GitHub 帳號>.github.io/<repository 名稱>/`；實際部署結果與網址以 Actions 的 `github-pages` environment 為準。分析程式、原始資料與本機設定不會出現在網站發布內容中。
+部署方式：**Settings → Pages → Build and deployment → Source** 設為 **Deploy from a branch**，Branch 選 **main / (root)**。根目錄的 `index.html` 會自動導向 `web/dist/`，`.nojekyll` 讓檔案原樣發布。推送至 `main` 後 GitHub 會自動重新部署。
+
+`.github/workflows/validate.yml` 會在網頁檔案變更時執行功能檢查（不負責部署）。
 
 ## 研究結果與重要限制
 
